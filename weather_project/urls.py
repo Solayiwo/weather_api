@@ -20,5 +20,5 @@ from weather_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.greeting_msg),
+    path('api/hello/', views.greeting_msg),
 ]
