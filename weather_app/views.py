@@ -17,9 +17,9 @@ def get_client_ip(request):
 
 def get_location(ip):
     """Retrieve the location based  on the client's IP address,
-        using weatherapi IP Lookup API service to get the location
+        using ipinfo service to get the location
     """
-    ip_api_url = f'http://api.weatherapi.com/v1/ip.json?key={api_key}&q={ip}'
+    ip_api_url = f'https://ipinfo.io/{ip}/json'
     response = requests.get(ip_api_url)
     ip_data = response.json()
 
